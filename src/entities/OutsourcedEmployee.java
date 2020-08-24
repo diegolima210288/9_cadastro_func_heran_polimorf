@@ -31,7 +31,7 @@ public final class OutsourcedEmployee extends Employee{
 	public double payment() {
 		super.payment();
 		return ((hours * valuePerHour) + additionalCharge)
-				+ additionalCharge * 1.1;
+				+ additionalCharge * 0.1;
 	}
 	
 	
