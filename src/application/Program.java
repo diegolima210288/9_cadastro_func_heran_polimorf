@@ -27,7 +27,7 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		List<OutsourcedEmployee> employee = new ArrayList<>();
+		List<Employee> employee = new ArrayList<>();
 		
 		System.out.print("Enter the number of employees: ");
 		int n = sc.nextInt();
@@ -54,12 +54,9 @@ public class Program {
 				
 			} else {
 				
-				employee.add(new OutsourcedEmployee(name, hours, valuePerHour, 0.0));
+				employee.add(new Employee(name, hours, valuePerHour));
 				
 			}
-			
-			//Obs.: todos os registros são de funcionarios, mesmos que algum seja terceiro
-			// todos são funcionarios.
 			
 		}
 		
@@ -67,7 +64,7 @@ public class Program {
 		System.out.println();
 		System.out.println("PAYMENTS: ");
 		//utilização laço for simples onde a varivel "obj" recebe os dados da lista
-		for (OutsourcedEmployee obj : employee) {
+		for (Employee obj : employee) {
 			System.out.println(obj.getName()+" - $ "+obj.payment());
 		}
 		
